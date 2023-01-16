@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7DEB26B3-8F33-4A9F-9C83-3A9E6DB2219E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Tamagotchi</RootNamespace>
+    <AssemblyName>Tamagotchi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IClean.cs" />
+    <Compile Include="Interfaces\IPlay.cs" />
+    <Compile Include="UI\5. AnimalMenu\Activity.cs" />
+    <Compile Include="Interfaces\IAnimalDetails.cs" />
+    <Compile Include="UI\5. AnimalMenu\AnimalActionsScreen.cs" />
+    <Compile Include="UI\5. AnimalMenu\ActivityArchiveScreen.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\CleaningKinds\FaceWash.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\CleaningKinds\Shower.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\CleaningMenu.cs" />
+    <Compile Include="UI\6. Activities\Cleaning\CleaningScreen.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FoodKinds\Cookie.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FeedingMenu.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FeedingScreen.cs" />
+    <Compile Include="UI\6. Activities\Feeding\Food.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FoodKinds\Pizza.cs" />
+    <Compile Include="UI\6. Activities\Feeding\FoodKinds\Rice.cs" />
+    <Compile Include="App\MainUi.cs" />
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Events\HungerAlert.cs" />
+    <Compile Include="Interfaces\IAction.cs" />
+    <Compile Include="Interfaces\IChangable.cs" />
+    <Compile Include="Interfaces\IFeed.cs" />
+    <Compile Include="Interfaces\Idetails.cs" />
+    <Compile Include="Interfaces\IPlayerAnimal.cs" />
+    <Compile Include="Models\Animal.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\3. PlayerDetailsScreens\ChangeDetailsScreen.cs" />
+    <Compile Include="UI\3. PlayerDetailsScreens\ViewDetails.cs" />
+    <Compile Include="UI\2. PlayerAnimalScreen\PlayerAnimalScreen.cs" />
+    <Compile Include="UI\3. PlayerDetailsScreens\PlayerDetailsMenu.cs" />
+    <Compile Include="UI\4. AnimalCreation\AnimalCreationScreen.cs" />
+    <Compile Include="UI\4. AnimalCreation\AnimalLoginScreen.cs" />
+    <Compile Include="UI\4. AnimalCreation\AnimalMainMenu.cs" />
+    <Compile Include="UI\4. AnimalCreation\AnimalScreen.cs" />
+    <Compile Include="UI\5. AnimalMenu\AnimalActionsMenu.cs" />
+    <Compile Include="UI\5. AnimalMenu\ChangeAnimalDetails.cs" />
+    <Compile Include="UI\5. AnimalMenu\ViewAnimalDetails.cs" />
+    <Compile Include="UI\6. Activities\playing\Games\Ball.cs" />
+    <Compile Include="UI\6. Activities\playing\Games\Games.cs" />
+    <Compile Include="UI\6. Activities\playing\Games\Jumpingrope.cs" />
+    <Compile Include="UI\6. Activities\playing\Games\PingPong.cs" />
+    <Compile Include="UI\6. Activities\playing\PlayingMenu.cs" />
+    <Compile Include="UI\6. Activities\playing\PlayingScreen.cs" />
+    <Compile Include="UI\6. Activities\ActivityScreen.cs" />
+    <Compile Include="UI\6. Activities\ActivityMenu.cs" />
+    <Compile Include="UI\1. RegisterLogin\LoginScreen.cs" />
+    <Compile Include="UI\Main menu\MainMenuScreen.cs" />
+    <Compile Include="UI\Main menu\MenuItem.cs" />
+    <Compile Include="UI\Main menu\MenuScreen.cs" />
+    <Compile Include="UI\2. PlayerAnimalScreen\PlayerAnimalMenu.cs" />
+    <Compile Include="UI\3. PlayerDetailsScreens\PlayerScreen.cs" />
+    <Compile Include="UI\1. RegisterLogin\RegisterScreen.cs" />
+    <Compile Include="UI\Screen.cs" />
+    <Compile Include="UI\WelcomeScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
